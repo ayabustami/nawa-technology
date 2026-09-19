@@ -1,0 +1,447 @@
+/**
+ * NAWA — English dictionary (source of truth).
+ * `ar.ts` is typed against this file, so a missing or renamed key is a
+ * compile error rather than a blank string in production.
+ */
+export const en = {
+  meta: {
+    titleSuffix: 'NAWA Technology',
+    defaultTitle: 'NAWA Technology — Build what’s next',
+    defaultDescription:
+      'NAWA Technology. نواة — the core, the seed. A technology company website foundation.',
+  },
+
+  brand: {
+    wordmark: 'NAWA',
+    wordmarkSub: 'Technology',
+    arabicMark: 'نواة',
+    meaningShort: 'نواة — the core',
+    meaning:
+      'NAWA comes from the Arabic نواة — the core, or the seed. Something small that grows into something much bigger.',
+    tagline: 'Technology, built from the core up.',
+  },
+
+  nav: {
+    home: 'Home',
+    services: 'Services',
+    work: 'Work',
+    about: 'About',
+    contact: 'Contact',
+    process: 'Process',
+    styleGuide: 'Style guide',
+    cta: 'Start a Project',
+    menu: 'Menu',
+    openMenu: 'Open navigation menu',
+    closeMenu: 'Close navigation menu',
+    skipToContent: 'Skip to content',
+    language: 'Language',
+    theme: 'Theme',
+    themeDark: 'Obsidian',
+    themeLight: 'Bone',
+    index: 'Index',
+  },
+
+  actions: {
+    startAProject: 'Start a Project',
+    exploreWork: 'Explore Our Work',
+    viewAll: 'View all',
+    viewService: 'View service',
+    viewProject: 'View project',
+    readCaseStudy: 'Read case study',
+    learnMore: 'Learn more',
+    ourProcess: 'Our process',
+    getInTouch: 'Get in touch',
+    back: 'Back',
+    backToWork: 'Back to work',
+    backToServices: 'Back to services',
+    next: 'Next',
+    previous: 'Previous',
+    retry: 'Try again',
+    submit: 'Send message',
+    sending: 'Sending…',
+    allCategories: 'All',
+    gridView: 'Grid',
+    listView: 'List',
+    filters: 'Filters',
+    clearFilters: 'Clear filters',
+    openLink: 'Open link',
+  },
+
+  /** Labels for the three data states every dynamic section supports. */
+  state: {
+    loading: 'Loading',
+    loadingCollection: 'Loading from database…',
+    empty: 'Empty',
+    emptyGenericTitle: 'Nothing here yet',
+    emptyGenericBody: 'This section is connected to the NAWA database and is waiting for its first records.',
+    error: 'Connection issue',
+    errorBody: 'This section could not reach the data source.',
+    populated: 'Populated',
+    previewRibbon: 'Preview data',
+    sourceApi: 'Live API',
+    sourceStub: 'Local stub',
+    sourcePreview: 'Preview fixtures',
+  },
+
+  /** Neutral placeholder copy for structural content slots. */
+  slots: {
+    marker: 'Content slot',
+    markerTemplate: 'Content slot — {label}',
+    heroSupporting: 'Hero supporting line will appear here.',
+    companyIntro: 'Company introduction will appear here.',
+    companyIntroLong:
+      'A longer introduction will appear here. This slot is filled from your database, and it is designed to hold two or three sentences of real company copy.',
+    mission: 'Mission statement will appear here.',
+    vision: 'Vision statement will appear here.',
+    approach: 'Our approach will be described here.',
+    valueTitle: 'Value title',
+    valueDescription: 'Value description will appear here.',
+    serviceName: 'Service name',
+    serviceDescription: 'Service description will appear here.',
+    serviceFullDescription: 'Full service description will appear here.',
+    serviceFeatures: 'Service features will appear here.',
+    projectTitle: 'Project title',
+    projectDescription: 'Project description will appear here.',
+    caseStudyBody: 'Case study content will appear here.',
+    capabilityLabel: 'Capability',
+    capabilityDescription: 'Capability description will appear here.',
+    stepTitle: 'Step title',
+    stepDescription: 'Description will appear here.',
+    stepDeliverables: 'Deliverables will appear here.',
+    contactDetails: 'Contact details will appear here.',
+    socialLinks: 'Social links will appear here.',
+    officeAddress: 'Office address will appear here.',
+    milestone: 'Milestone will appear here.',
+    teamMember: 'Team member will appear here.',
+    testimonial: 'Client testimonial will appear here.',
+    statisticLabel: 'Label',
+    statisticValue: '—',
+    imageAlt: 'Image will appear here.',
+  },
+
+  /** Empty states — each one is written to look intentional, not broken. */
+  empty: {
+    work: {
+      title: 'Our work is coming soon.',
+      body: 'Projects are published from the NAWA database. Nothing has been released here yet.',
+    },
+    services: {
+      title: 'Services are being defined.',
+      body: 'This grid is connected to the NAWA database. Service records will appear here as soon as they are published.',
+    },
+    capabilities: {
+      title: 'Capabilities will appear here.',
+      body: 'This section reads from a capabilities collection that has no records yet.',
+    },
+    process: {
+      title: 'The process is not published yet.',
+      body: 'Steps are loaded from the NAWA database in order.',
+    },
+    values: {
+      title: 'Values will appear here.',
+      body: 'Company values are stored as records and rendered as a grid.',
+    },
+    testimonials: {
+      title: 'Client words will appear here.',
+      body: 'Testimonials are never written by hand on this site — they load from the database.',
+    },
+    team: {
+      title: 'Team members will appear here.',
+      body: 'The team grid is database-driven and currently has no records.',
+    },
+    milestones: {
+      title: 'Milestones will appear here.',
+      body: 'Company history is stored as dated records.',
+    },
+    contactChannels: {
+      title: 'Contact details will appear here.',
+      body: 'Email, phone, office and social links load from the database. None have been added yet.',
+    },
+    projectsRelated: {
+      title: 'No related projects yet.',
+      body: 'Related work appears here once more projects are published.',
+    },
+    filters: {
+      title: 'No projects in this category.',
+      body: 'Try a different filter.',
+    },
+  },
+
+  home: {
+    hero: {
+      eyebrow: 'NAWA Technology',
+      eyebrowArabic: 'نواة',
+      headlineLine1: 'Build what’s',
+      headlineLine2: 'next.',
+      supporting:
+        'A technology company foundation. The statement in this slot is loaded from your database.',
+      primaryCta: 'Start a Project',
+      secondaryCta: 'Explore Our Work',
+      scrollHint: 'Scroll',
+      statusLabel: 'Available for new projects',
+      statusLabelPending: 'Status loaded from database',
+    },
+    intro: {
+      eyebrow: 'Introduction',
+      index: '01',
+      titleSlot: 'Company introduction will appear here.',
+      bodySlot:
+        'This is the introduction slot. It is designed for two or three sentences that explain who NAWA is — loaded from your content table, never hardcoded.',
+      meaningLabel: 'The name',
+      meaningBody:
+        'NAWA comes from the Arabic نواة — the core, or the seed. Something small that grows into something much bigger.',
+      linkLabel: 'About NAWA',
+    },
+    services: {
+      eyebrow: 'Services',
+      index: '02',
+      title: 'What we do',
+      lede: 'Service records load from the database and render as reusable cards.',
+      link: 'All services',
+    },
+    work: {
+      eyebrow: 'Selected work',
+      index: '03',
+      title: 'Work',
+      lede: 'Projects load from the database. Each one opens a full case-study template.',
+      link: 'All projects',
+    },
+    capabilities: {
+      eyebrow: 'Capabilities',
+      index: '04',
+      title: 'Capabilities',
+      lede: 'A capability collection renders as a running index.',
+    },
+    process: {
+      eyebrow: 'How we work',
+      index: '05',
+      title: 'Process',
+      lede: 'Ordered steps, loaded from the database.',
+      link: 'Full process',
+    },
+    cta: {
+      eyebrow: 'Next step',
+      title: 'Let’s build the core of something bigger.',
+      body: 'Tell us what you are working on. The brief goes straight to the NAWA inbox.',
+      primaryCta: 'Start a Project',
+      secondaryCta: 'Explore Our Work',
+    },
+  },
+
+  pageHero: {
+    services: {
+      eyebrow: 'Services',
+      title: 'Services',
+      lede: 'Every card below is a database record. Name, description, features, technologies and a call to action — all editable without a deploy.',
+    },
+    work: {
+      eyebrow: 'Work',
+      title: 'Work',
+      lede: 'Projects and case studies, loaded from the NAWA database.',
+    },
+    about: {
+      eyebrow: 'About',
+      title: 'About NAWA',
+      lede: 'The company, its mission, its vision and the way it works.',
+    },
+    process: {
+      eyebrow: 'Process',
+      title: 'Process',
+      lede: 'An ordered set of steps. Titles, descriptions and deliverables all come from the database.',
+    },
+    contact: {
+      eyebrow: 'Contact',
+      title: 'Start a Project',
+      lede: 'Send a brief. The form posts to your API — no details are stored in this frontend.',
+    },
+    styleGuide: {
+      eyebrow: 'Internal',
+      title: 'Design system',
+      lede: 'The tokens, components and states this site is built from.',
+    },
+    serviceDetail: {
+      eyebrow: 'Service',
+    },
+    projectDetail: {
+      eyebrow: 'Case study',
+    },
+  },
+
+  services: {
+    sectionTitle: 'Services',
+    whatYouGet: 'What this includes',
+    technologies: 'Technologies',
+    features: 'Features',
+    noFeatures: 'Feature list will appear here.',
+    noTechnologies: 'Technology list will appear here.',
+    detailCta: 'Start a Project',
+    relatedServices: 'Other services',
+    overview: 'Overview',
+    atAGlance: 'At a glance',
+    countTemplate: { one: '1 service', two: '2 services', many: '{n} services' },
+  },
+
+  work: {
+    sectionTitle: 'Selected work',
+    filtersLabel: 'Category',
+    resultsTemplate: { one: '1 project', two: '2 projects', many: '{n} projects' },
+    technologies: 'Technologies',
+    year: 'Year',
+    category: 'Category',
+    client: 'Client',
+    role: 'Role',
+    duration: 'Duration',
+    visitProject: 'Visit project',
+    caseStudy: 'Case study',
+    noCaseStudy: 'Case study content will appear here.',
+    projectDetails: 'Project details',
+    nextProject: 'Next project',
+    shareProject: 'Share',
+    coverLabel: 'Project cover image',
+    gallery: 'Gallery',
+    outcomes: 'Outcomes',
+  },
+
+  about: {
+    intro: { eyebrow: 'Introduction', title: 'Who we are' },
+    mission: { eyebrow: 'Mission', title: 'Mission' },
+    vision: { eyebrow: 'Vision', title: 'Vision' },
+    values: { eyebrow: 'Values', title: 'Values', lede: 'Value records load from the database and render as an indexed grid.' },
+    approach: { eyebrow: 'Approach', title: 'How we work' },
+    history: { eyebrow: 'History', title: 'Milestones', lede: 'Dated records, rendered as a timeline.' },
+    team: { eyebrow: 'Team', title: 'People', lede: 'Team records load from the database.' },
+    pillarsLabel: 'Pillars',
+  },
+
+  process: {
+    title: 'Process',
+    lede: 'Four ordered steps. The structure is fixed; the wording comes from your database.',
+    stepLabel: 'Step',
+    deliverables: 'Deliverables',
+    duration: 'Duration',
+    principlesTitle: 'Principles',
+    principlesLede: 'Values records render here as a supporting list.',
+    ctaTitle: 'Ready to start?',
+    ctaBody: 'Send a brief and we will take it from the core up.',
+  },
+
+  contact: {
+    formTitle: 'Project brief',
+    formLede: 'Every field maps directly to a column in your submissions table.',
+    fields: {
+      name: 'Name',
+      namePlaceholder: 'Your full name',
+      email: 'Email',
+      emailPlaceholder: 'name@company.com',
+      company: 'Company',
+      companyPlaceholder: 'Company or organisation',
+      projectType: 'Project type',
+      projectTypePlaceholder: 'Select a project type',
+      budget: 'Budget',
+      budgetPlaceholder: 'Select a range',
+      message: 'Message',
+      messagePlaceholder: 'What are you building?',
+    },
+    optional: 'Optional',
+    required: 'Required',
+    submit: 'Start a Project',
+    submitting: 'Sending…',
+    successTitle: 'Brief received.',
+    successBody: 'This is the success state. Your API response can replace this copy.',
+    successAgain: 'Send another brief',
+    errorTitle: 'Could not send',
+    errorBody: 'The request did not reach the API. Check your endpoint configuration.',
+    /** Options are neutral on purpose — replace with your own taxonomy. */
+    projectTypes: {
+      label: 'Project type options load from your database',
+      placeholders: ['Project type A', 'Project type B', 'Project type C', 'Project type D'],
+    },
+    budgets: {
+      label: 'Budget bands load from your database',
+      placeholders: ['Budget band A', 'Budget band B', 'Budget band C', 'Budget band D'],
+    },
+    channelsTitle: 'Direct contact',
+    channelsLede: 'Contact channels are database records.',
+    officesTitle: 'Offices',
+    responseTimeLabel: 'Response time',
+    responseTimeValue: 'Set in your database',
+    faqTitle: 'Before you write',
+    faqLede: 'Frequently asked questions load from the database.',
+    validation: {
+      nameRequired: 'Please enter your name.',
+      emailRequired: 'Please enter your email address.',
+      emailInvalid: 'Please enter a valid email address.',
+      messageRequired: 'Please tell us a little about the project.',
+      messageShort: 'A little more detail helps — at least 20 characters.',
+    },
+  },
+
+  testimonials: {
+    eyebrow: 'Testimonials',
+    title: 'What clients say',
+    lede: 'Quotes are database records. They are never written by hand in the frontend.',
+  },
+
+  cta: {
+    title: 'Let’s build the core of something bigger.',
+    body: 'Tell us what you are working on.',
+    primary: 'Start a Project',
+    secondary: 'Explore Our Work',
+  },
+
+  footer: {
+    brandLine: 'NAWA Technology. نواة — the core, the seed.',
+    navigate: 'Navigate',
+    company: 'Company',
+    connect: 'Connect',
+    legal: 'Legal',
+    rights: 'All rights reserved.',
+    builtNote: 'Built on the NAWA design system.',
+    privacy: 'Privacy',
+    terms: 'Terms',
+    backToTop: 'Back to top',
+    statusReady: 'Systems connected',
+    statusAwaiting: 'Awaiting content',
+  },
+
+  dev: {
+    panelTitle: 'State preview',
+    panelHint: 'Developer only. Shipped site renders the live/empty path.',
+    live: 'Live',
+    liveHint: 'Fetch from the API and render whatever it returns.',
+    loadingHint: 'Hold every dynamic section in its skeleton state.',
+    emptyHint: 'Force the designed empty states.',
+    populatedHint: 'Render generic preview fixtures — not company content.',
+    themeLabel: 'Theme',
+    langLabel: 'Language',
+    open: 'Open state preview',
+    close: 'Close state preview',
+    badge: 'Preview mode',
+    reset: 'Reset',
+    apiConnected: 'API connected',
+    apiNotConnected: 'No API configured — stubs return empty',
+  },
+
+  notFound: {
+    code: '404',
+    title: 'This page does not exist.',
+    body: 'The link may be old, or the route may not have been built yet.',
+    primary: 'Back to home',
+    secondary: 'Explore Our Work',
+  },
+
+  a11y: {
+    mainNavigation: 'Main navigation',
+    footerNavigation: 'Footer navigation',
+    mobileNavigation: 'Mobile navigation',
+    languageSwitcher: 'Change language',
+    themeSwitcher: 'Change colour theme',
+    projectCover: 'Project cover',
+    serviceIcon: 'Service icon',
+    logoHome: 'NAWA Technology — home',
+    loadingRegion: 'Loading content',
+    formProgress: 'Form status',
+  },
+};
+
+export type Dictionary = typeof en;
